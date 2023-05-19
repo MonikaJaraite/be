@@ -17,13 +17,10 @@
                             <a href="{{ route('countries.show', $country) }}">Show more</a><br>
                             <a href="{{ route('countries.edit', $country) }}">Edit</a>
                             <form method="post" action="{{ route('countries.destroy', $country) }}">
-                            <button type="submit" class="btn btn-outline-danger">Delete</button>
-                            {{-- <a href="{{ route('stories.edit', $story) }}">Edit</a> --}}
-                            {{-- <form method="post" action="{{ route('stories.destroy', $story) }}">
-                                <button type="submit" class="btn btn-outline-danger">delete</button>
+                            <button type="submit" class="btn btn-outline-danger">delete</button>
                             @csrf
                             @method('delete')
-                            </form> --}}
+                            </form>
                         </li>
                         @empty
                         <li class="list-group-item">

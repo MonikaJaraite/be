@@ -85,7 +85,7 @@ class CountryController extends Controller
     {
         $country->delete();
         return redirect()
-        ->route('stories.index')
+        ->route('countries.index')
         ->with('info', 'The country has been deleted');
     }
 }
