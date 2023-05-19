@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Country;
+
 class CountryController extends Controller
 {
     /**
@@ -11,7 +13,9 @@ class CountryController extends Controller
      */
     public function index()
     {
-        //
+        $countries = Country::all();
+
+        return view('countries.index', ['countries'=>$countries]);
     }
 
     /**
@@ -19,7 +23,7 @@ class CountryController extends Controller
      */
     public function create()
     {
-        //
+        return view('countries.create');
     }
 
     /**
@@ -27,7 +31,19 @@ class CountryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $country = Country::create([
+            'name' => $request->name,
+            'season_start' => $request->season_start,
+            'season_end' => $request->season_end
+        ]);
+       
+        if($request->file('photo')) {
+            $country->update(['photo' => $request->file('photo')->store('photos')]);
+        }
+
+        return redirect()
+        ->route('countries.index')
+        ->with('ok', 'New country has been created');
     }
 
     /**

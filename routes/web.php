@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CountryController;
+use App\Http\Controllers\HotelController;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,4 +23,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::resource('countries', StoryController::class);
+Route::resource('countries', CountryController::class);
+Route::resource('hotels', HotelController::class);
+Route::resource('orders', OrderController::class);

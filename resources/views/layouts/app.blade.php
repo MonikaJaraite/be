@@ -37,11 +37,42 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                 <a style="color: darkblue" class="dropdown-item" href="{{ route('countries.index') }}">
-                                    Countries list
+                                    Countries List
                                 </a>
-                                {{-- <a style="color: darkblue" class="dropdown-item" href="{{ route('hotels.index') }}">
-                                    Hotels list
-                                </a> --}}
+                                <a style="color: darkblue" class="dropdown-item" href="{{ route('countries.create') }}">
+                                    New Country
+                                </a>
+                            </div>
+                        </li>
+                        @endauth
+                    </ul>
+                    <ul class="navbar-nav me-auto">
+                        @auth
+                        <li class="nav-item dropdown">
+                            <a style="color: darkblue" id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                Hotels
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <a style="color: darkblue" class="dropdown-item" href="{{ route('hotels.index') }}">
+                                    Hotels List
+                                </a>
+                                <a style="color: darkblue" class="dropdown-item" href="{{ route('hotels.create') }}">
+                                    New Hotel
+                                </a>
+                            </div>
+                        </li>
+                        @endauth
+                    </ul>
+                     <ul class="navbar-nav me-auto">
+                        @auth
+                        <li class="nav-item dropdown">
+                            <a style="color: darkblue" id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                Orders
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <a style="color: darkblue" class="dropdown-item" href="{{ route('orders.index') }}">
+                                    Orders List
+                                </a>
                             </div>
                         </li>
                         @endauth
