@@ -10,12 +10,6 @@
                     <input type="text" name="name" class="form-control" placeholder="Enter country">
                 </div>
                 <div class="form-group">
-                    <label for="photo">Photo</label>
-                    <div class="col-sm-6">
-                        <input type="file" name="photo" class="form-control">
-                    </div>
-                </div> 
-                <div class="form-group">
                     <label for="season_start">Season starts</label>
                     <input type="text" name="season_start" class="form-control" placeholder="Enter starting date">
                 </div>
