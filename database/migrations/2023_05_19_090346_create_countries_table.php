@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('countries', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->date('season_start');
-            $table->date('season_end');
+            $table->string('season_start');
+            $table->string('season_end');
             $table->timestamps();
         });
     }

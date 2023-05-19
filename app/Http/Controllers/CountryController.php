@@ -37,9 +37,9 @@ class CountryController extends Controller
             'season_end' => $request->season_end
         ]);
        
-        if($request->file('photo')) {
-            $country->update(['photo' => $request->file('photo')->store('photos')]);
-        }
+        // if($request->file('photo')) {
+        //     $country->update(['photo' => $request->file('photo')->store('photos')]);
+        // }
 
         return redirect()
         ->route('countries.index')
